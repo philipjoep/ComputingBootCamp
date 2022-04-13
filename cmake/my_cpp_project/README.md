@@ -1,6 +1,8 @@
 # Phil's Notes: ```my_cpp_project```
 
 ## Intro
+https://byu-cpe.github.io/ComputingBootCamp/tutorials/cmake/#lecture-tutorial
+
 Steps to build:
 1) Pre-processor
 2) Compiler (source to assembly)
