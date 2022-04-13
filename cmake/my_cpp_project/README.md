@@ -1,11 +1,13 @@
-#Phil's Notes
+#  Phil's Notes
 
+## Intro
 Steps to build:
 1) Pre-processor
 2) Compiler (source to assembly)
 3) Assembler (assembly to binary)
 4) Linker
 
+## Compiling and Linking the Hard Way
 To look at pre-processor effects on source files:
 ```bash
 gcc -E -P main.cpp     >> main.i
@@ -23,6 +25,7 @@ Call sssembler on assembly file to create object (binary) files
 as -o main.o     main.s
 as -o my_file.o  my_file.s
 ```
+
 To list all the symbols in the object file:
 ```bash
 nm main.o
@@ -38,6 +41,8 @@ Or there's a shorter way to do everything above:
 # Need g++ because of iostream
 g++ -o my_program main.cpp my_file.cpp
 ```
+
+## Static Library
 The problem doing it this way is every file is compiled each time, even if most of them have not changed.
 
 You can use static libraries to build code once.
@@ -61,6 +66,7 @@ ar rvs mylib.a my_file.o
 g++ -o my_program main.cpp mylib.a
 ```
 
+## Dynamic Library (Shared Object)
 Could use a dynamic libray (shared objects) instead:
 
 PIC stands for "Position Independent Code".
