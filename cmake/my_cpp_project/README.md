@@ -1,4 +1,4 @@
-#  Phil's Notes
+# Phil's Notes: ```my_cpp_project```
 
 ## Intro
 Steps to build:
@@ -94,10 +94,22 @@ g++ -o my_program main.cpp -l mylib
 # This also produces an error when trying to run the program.
 g++ -o my_program -L/home/pi/dev_workspace/ComputingBootCamp/cmake/my_cpp_project main.cpp -l mylib
 
-# This environment variable needs to have the path to the shared library
+# This environment variable needs to have the path to the shared library.
+# LD_LIBRARY_PATH tells your shell where to  file the libraries.
 echo $LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/pi/dev_workspace/ComputingBootCamp/cmake/my_cpp_project:$LD_LIBRARY_PATH
 
 # Now you can run my_program
 ./my_program
+```
+
+## Include Directives
+
+Two different ways to include header files
+```C
+// Standard location
+#include <iostream>
+
+// Project specific, non-standard header
+#include "include/my_file.hpp"
 ```
